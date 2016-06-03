@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="./assets/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/lib/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="app-container"></div>
+
+    <script data-container="#app-container" type="text/lmtTemplate" data-url="http://dwgridview.webdev.duowan.com/index.php?r=test/getData&size=10&page=1">
+    <ul>
+        {{foreach data as item }}
+            <li>VID: {{item.vid}}</li>
+            <li>名称: {{item.title}}</li>
+            <li>封面: {{&item.cover}}</li>
+        {{/foreach}}
+    </ul>
+    </script>
+
+<script src="./build/main.js"></script>
+
+</body>
+</html>
